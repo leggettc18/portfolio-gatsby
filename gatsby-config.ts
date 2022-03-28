@@ -2,8 +2,10 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `new`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Christopher Leggett's Portfolio and Blog`,
+    description: `The Portfolio and Blog for the aspiring software developer Christopher Leggett`,
+    siteUrl: `https://chrisleggett.me`,
+    twitterUsername: `@leggettc18`
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-react-helmet", {
     resolve: 'gatsby-plugin-manifest',
