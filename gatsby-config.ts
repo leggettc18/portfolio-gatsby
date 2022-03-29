@@ -7,7 +7,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://chrisleggett.me`,
     twitterUsername: `@leggettc18`
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-react-helmet", {
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-postcss", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
