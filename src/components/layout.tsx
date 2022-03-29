@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import { FunctionComponent } from "react";
 
 type LayoutProps = {
@@ -7,19 +7,29 @@ type LayoutProps = {
 }
 
 const Layout: FunctionComponent<LayoutProps> = ({ pageTitle, children }) => {
+    const data = useStaticQuery(graphql`
+        query{
+            site {
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `)
     return (
-        <div className="">
-            <title>{pageTitle}</title>
+        <div className="min-h-screen bg-zinc-100 dark:bg-zinc-900">
+            <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+            <header className="text-zinc-700 dark:text-zinc-300 text-2xl font-bold p-9">{data.site.siteMetadata.title}</header>
             <nav>
-                <ul>
+                <ul className="flex space-x-5 pl-9">
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-700 dark:hover:text-purple-300 font-semibold text-lg" to="/">Home</Link>
                     </li>
-                    <li><Link to="/about">About</Link></li>
+                    <li><Link className="text-gray-700 dark:text-zinc-300 hover:text-purple-700 dark:hover:text-purple-300 font-semibold text-lg" to="/about">About</Link></li>
                 </ul>
             </nav>
-            <main className="flex justify-center">
-                <div className="prose lg:prose-xl prose-slate">
+            <main className="flex justify-center bg-gradient-to-l from-purple-100 to-purple-200 dark:from-inherit dark:to-inherit p-9 mt-5 md:m-9 rounded-xl">
+                <div className="prose lg:prose-xl prose-zinc dark:prose-invert">
                     <h1>{pageTitle}</h1>
                     {children}
                 </div>

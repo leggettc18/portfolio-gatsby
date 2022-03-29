@@ -5,9 +5,11 @@ import { StaticImage } from "gatsby-plugin-image";
 // markup
 const IndexPage = () => {
     return (
-        <Layout pageTitle="Home Page">
-            <p>I'm making this by following the Gatsby Tutorial.</p>
-            <StaticImage alt="A picture of me, Christopher Leggett" src="../images/me.webp" className="rounded-full w-1/2" />
+        <Layout pageTitle="Christopher Leggett">
+            <p>Portfolio and Blog of East Carolina University Graduate and Aspiring Software Developer</p>
+            <div className="flex justify-center">
+                <StaticImage alt="A picture of me, Christopher Leggett" src="../images/me.webp" className="rounded-full w-52 self-center" />
+            </div>
         </Layout>
     )
 }
