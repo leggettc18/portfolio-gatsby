@@ -20,7 +20,7 @@ module.exports = {
                         options: {
                             maxWidth: 1200,
                         },
-                    }, "gatsby-remark-gifs"
+                    }, "gatsby-remark-gifs", "gatsby-remark-prismjs"
                 ],
             },
         }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {

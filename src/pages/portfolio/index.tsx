@@ -44,9 +44,6 @@ export const query = graphql`
           title
           portfolioScore
         }
-        fields {
-            source
-        }
         slug
         id
       }
