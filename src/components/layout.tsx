@@ -25,7 +25,12 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageTitle, children }) => {
                     <li>
                         <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-700 dark:hover:text-purple-300 font-semibold text-lg" to="/">Home</Link>
                     </li>
-                    <li><Link className="text-gray-700 dark:text-zinc-300 hover:text-purple-700 dark:hover:text-purple-300 font-semibold text-lg" to="/about">About</Link></li>
+                    <li>
+                        <Link className="text-gray-700 dark:text-zinc-300 hover:text-purple-700 dark:hover:text-purple-300 font-semibold text-lg" to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-700 dark:hover:text-purple-300 font-semibold text-lg" to="/portfolio">Portfolio</Link>
+                    </li>
                 </ul>
             </nav>
             <main className="flex justify-center p-9 mt-5 md:m-9 rounded-xl">
