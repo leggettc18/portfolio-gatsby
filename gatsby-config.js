@@ -11,7 +11,19 @@ module.exports = {
         options: {
             icon: "src/images/icon.png"
         }
-    }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+    }, {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+                gatsbyRemarkPlugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 1200,
+                        },
+                    }, "gatsby-remark-gifs"
+                ],
+            },
+        }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: "images",
@@ -21,7 +33,13 @@ module.exports = {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: "portfolio",
-                path: `${__dirname}/portfolio/`
+                path: `${__dirname}/content/portfolio/`
             },
-        }]
+        }, {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: "blog",
+                path: `${__dirname}/content/blog/`
+            },
+        }, "gatsby-plugin-mdx-source-name"]
 };

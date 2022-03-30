@@ -10,20 +10,19 @@ type DataProps = {
             frontmatter: {
                 date: string,
                 title: string
-
             }
         }>
     }
 }
 
-const PortfolioPage = ({ data }: PageProps<DataProps>) => {
+const BlogPage = ({ data }: PageProps<DataProps>) => {
     return (
-        <Layout pageTitle="My Portfolio">
+        <Layout pageTitle="My Blog Posts">
             {
                 data.allMdx.nodes.map((node) => (
                     <article key={node.id}>
                         <h2>
-                            <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-700 dark:hover:text-purple-300 no-underline hover:underline" to={`/portfolio/${node.slug}`}>
+                            <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-700 dark:hover:text-purple-300 no-underline hover:underline" to={`/blog/${node.slug}`}>
                                 {node.frontmatter.title}
                             </Link>
                         </h2>
@@ -37,15 +36,11 @@ const PortfolioPage = ({ data }: PageProps<DataProps>) => {
 
 export const query = graphql`
   query {
-    allMdx(sort: {fields: frontmatter___portfolioScore, order: DESC }, filter: { fields: { source: { eq: "portfolio" }}}) {
+    allMdx(sort: {fields: frontmatter___date, order: DESC}, filter: { fields: { source: { eq: "blog" }}}) {
       nodes {
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
-          portfolioScore
-        }
-        fields {
-            source
         }
         slug
         id
@@ -54,4 +49,4 @@ export const query = graphql`
   }
 `
 
-export default PortfolioPage
+export default BlogPage
