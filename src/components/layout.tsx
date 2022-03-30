@@ -28,7 +28,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageTitle, children }) => {
                     <li><Link className="text-gray-700 dark:text-zinc-300 hover:text-purple-700 dark:hover:text-purple-300 font-semibold text-lg" to="/about">About</Link></li>
                 </ul>
             </nav>
-            <main className="flex justify-center bg-gradient-to-l from-purple-100 to-purple-200 dark:from-inherit dark:to-inherit p-9 mt-5 md:m-9 rounded-xl">
+            <main className="flex justify-center p-9 mt-5 md:m-9 rounded-xl">
                 <div className="prose lg:prose-xl prose-zinc dark:prose-invert">
                     <h1>{pageTitle}</h1>
                     {children}
