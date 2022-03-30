@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql, PageProps, GatsbyNode, Link } from 'gatsby'
+import { graphql, PageProps, Link } from 'gatsby'
 import Layout from '../../components/layout'
 
 type DataProps = {
@@ -22,7 +22,7 @@ const BlogPage = ({ data }: PageProps<DataProps>) => {
                 data.allMdx.nodes.map((node) => (
                     <article key={node.id}>
                         <h2>
-                            <Link to={`/portfolio/${node.slug}`}>
+                            <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-700 dark:hover:text-purple-300 no-underline hover:underline" to={`/portfolio/${node.slug}`}>
                                 {node.frontmatter.title}
                             </Link>
                         </h2>
