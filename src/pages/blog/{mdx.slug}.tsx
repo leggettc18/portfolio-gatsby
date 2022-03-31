@@ -3,11 +3,11 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../../components/layout';
 
-type ProjectProps = {
+type PostProps = {
     data: any
 }
 
-const Project: React.FunctionComponent<ProjectProps> = ({ data }) => {
+const Post: React.FunctionComponent<PostProps> = ({ data }) => {
     return (
         <Layout pageTitle={data.mdx.frontmatter.title}>
             <p>{data.mdx.frontmatter.date}</p>
@@ -30,4 +30,4 @@ export const query = graphql`
     }
 `
 
-export default Project;
+export default Post;

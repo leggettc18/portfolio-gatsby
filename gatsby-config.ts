@@ -1,5 +1,7 @@
+import { GatsbyConfig } from 'gatsby';
+import path from 'path';
 
-module.exports = {
+const config: GatsbyConfig = {
     siteMetadata: {
         title: `Christopher Leggett's Portfolio and Blog`,
         description: `The Portfolio and Blog for the aspiring software developer Christopher Leggett`,
@@ -19,6 +21,7 @@ module.exports = {
                         resolve: `gatsby-remark-images`,
                         options: {
                             maxWidth: 1200,
+                            backgroundColor: "transparent"
                         },
                     }, "gatsby-remark-gifs", "gatsby-remark-prismjs"
                 ],
@@ -33,13 +36,15 @@ module.exports = {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: "portfolio",
-                path: `${__dirname}/content/portfolio/`
+                path: path.resolve("content/portfolio")
             },
         }, {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: "blog",
-                path: `${__dirname}/content/blog/`
+                path: path.resolve("content/blog")
             },
         }, "gatsby-plugin-mdx-source-name"]
 };
+
+export default config;

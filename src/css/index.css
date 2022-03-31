@@ -7,3 +7,15 @@
         @apply bg-zinc-100 dark:bg-zinc-900;
     }
 }
+
+@layer components {
+    pre {
+        @apply max-w-[40ch] md:max-w-none;
+    }
+}
+
+@layer utilities {
+    pre {
+        @apply text-xs;
+    }
+}
