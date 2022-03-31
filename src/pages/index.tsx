@@ -13,6 +13,7 @@ const IndexPage = () => {
                 }
             }
             allMdx(sort: {fields: frontmatter___portfolioScore, order: DESC }, filter: { fields: { source: { eq: "portfolio" }}, frontmatter: { featured: { eq: true }}}) {
+
                 nodes {
                     frontmatter {
                         date(formatString: "MMMM D, YYYY")
