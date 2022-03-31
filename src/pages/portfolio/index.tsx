@@ -7,10 +7,10 @@ type DataProps = {
         nodes: Array<{
             id: string
             slug: string
+            excerpt: string
             frontmatter: {
                 date: string,
                 title: string
-
             }
         }>
     }
@@ -23,11 +23,13 @@ const PortfolioPage = ({ data }: PageProps<DataProps>) => {
                 data.allMdx.nodes.map((node) => (
                     <article key={node.id}>
                         <h2>
-                            <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-300 no-underline transition duration-200" to={`/portfolio/${node.slug}`}>
+                            <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 no-underline transition duration-200" to={`/portfolio/${node.slug}`}>
                                 {node.frontmatter.title}
                             </Link>
                         </h2>
                         <p>Posted: {node.frontmatter.date}</p>
+                        <p>{node.excerpt}</p>
+                        <Link to={`/portfolio/${node.slug}`} className="text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 no-underline transition duration-200">Read More...</Link>
                     </article>
                 ))
             }
@@ -46,6 +48,7 @@ export const query = graphql`
         }
         slug
         id
+        excerpt
       }
     }
   }
