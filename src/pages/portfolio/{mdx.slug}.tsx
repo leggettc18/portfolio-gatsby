@@ -37,6 +37,7 @@ export const query = graphql`
                 github
             }
             body
+            excerpt
         }
     }
 `
