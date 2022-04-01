@@ -42,11 +42,11 @@ const IndexPage = () => {
                 {
                     data.allMdx.nodes.map((node: any) => (
                         <article key={node.id} className="dark:bg-zinc-800 rounded p-4 m-2 flex-1">
-                            <h3 className="m-0 text-center">
+                            <div className="m-0 text-2xl text-center">
                                 <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 no-underline transition duration-200" to={`/portfolio/${node.slug}`}>
                                     {node.frontmatter.title}
                                 </Link>
-                            </h3>
+                            </div>
                         </article>
                     ))
                 }
