@@ -2,6 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
+import SEO from "../components/seo";
 
 // markup
 const IndexPage = () => {
@@ -13,7 +14,6 @@ const IndexPage = () => {
                 }
             }
             allMdx(sort: {fields: frontmatter___portfolioScore, order: DESC }, filter: { fields: { source: { eq: "portfolio" }}, frontmatter: { featured: { eq: true }}}) {
-
                 nodes {
                     frontmatter {
                         date(formatString: "MMMM D, YYYY")
@@ -28,6 +28,7 @@ const IndexPage = () => {
     `)
     return (
         <Layout pageTitle="Christopher Leggett">
+            <SEO />
             <div className="flex flex-col md:flex-row items-center">
                 <div>
                     <p>{data.site.siteMetadata.description}</p>

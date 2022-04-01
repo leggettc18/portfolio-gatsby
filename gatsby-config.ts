@@ -5,7 +5,8 @@ const config: GatsbyConfig = {
     siteMetadata: {
         title: `Christopher Leggett's Portfolio and Blog`,
         description: `The Portfolio and Blog for the aspiring software developer Christopher Leggett`,
-        siteUrl: `https://chrisleggett.me`,
+        url: `https://chrisleggett.me`,
+        image: '/me.png',
         twitterUsername: `@leggettc18`
     },
     plugins: ["gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-postcss", {

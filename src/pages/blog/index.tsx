@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { graphql, PageProps, Link } from 'gatsby'
 import Layout from '../../components/layout'
+import SEO from '../../components/seo'
 
 type DataProps = {
     allMdx: {
@@ -19,6 +20,7 @@ type DataProps = {
 const BlogPage = ({ data }: PageProps<DataProps>) => {
     return (
         <Layout pageTitle="My Blog Posts">
+            <SEO />
             {
                 data.allMdx.nodes.map((node) => (
                     <article key={node.id} className="dark:bg-zinc-800 bg-zinc-200 p-4 rounded">
