@@ -14,7 +14,7 @@ const Post: React.FunctionComponent<PostProps> = ({ data }) => {
             <SEO
                 title={data.mdx.frontmatter.title}
                 description={data.mdx.frontmatter.description || data.mdx.excerpt || 'nothin’'}
-                image={data.mdx.frontmatter.image.childImageSharp.sizes.src}
+                image={data.mdx.frontmatter.image?.childImageSharp.sizes.src}
                 article
             />
             <p>{data.mdx.frontmatter.date}</p>
