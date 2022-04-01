@@ -13,7 +13,7 @@ const Post: React.FunctionComponent<PostProps> = ({ data }) => {
         <Layout pageTitle={data.mdx.frontmatter.title}>
             <SEO
                 title={data.mdx.frontmatter.title}
-                description={data.mdx.frontmatter.description || data.mdx.excerpt || 'nothin’'}
+                description={data.mdx.excerpt || 'nothin’'}
                 image={data.mdx.frontmatter.image?.childImageSharp.sizes.src}
                 article
             />
@@ -33,6 +33,7 @@ export const query = graphql`
                 date(formatString: "MMMM D, YYYY")
             }
             body
+            excerpt
         }
     }
 `
