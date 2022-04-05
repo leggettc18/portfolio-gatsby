@@ -30,7 +30,7 @@ const SEO = ({ title, description, image, article }: SeoProps) => {
     };
 
     return (
-        <Helmet title={seo.title} titleTemplate={seo.title}>
+        <Helmet title={seo.title} titleTemplate={seo.title} htmlAttributes={{ lang: 'en' }}>
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}
