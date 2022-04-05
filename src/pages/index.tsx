@@ -30,7 +30,7 @@ const IndexPage = () => {
         <Layout pageTitle="Christopher Leggett">
             <SEO />
             <div className="flex flex-col md:flex-row items-center bg-hero-pattern px-8 rounded-lg">
-                <div className="font-semibold bg-zinc-100 dark:bg-zinc-900 px-4 rounded-lg shadow-xl shadow-zinc-600/50 dark:shadow-zinc-900/50">
+                <div className="font-semibold bg-zinc-100 dark:bg-zinc-900 px-4 mt-4 md:mt-0 rounded-lg shadow-xl shadow-zinc-600/50 dark:shadow-zinc-900/50">
                     <p>{data.site.siteMetadata.description}</p>
                     <p>Welcome to the redesigned portfolio! The styling is still a bit basic compared to the old Hugo site but that will be fixed in time.</p>
                 </div>
