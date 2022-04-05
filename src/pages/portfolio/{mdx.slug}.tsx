@@ -10,7 +10,8 @@ type ProjectProps = {
 
 const Project: React.FunctionComponent<ProjectProps> = ({ data }) => {
     return (
-        <Layout pageTitle={data.mdx.frontmatter.title}>
+        <Layout pageTitle={data.mdx.frontmatter.title} >
+            <div className="px-9">
             <SEO
                 title={data.mdx.frontmatter.title}
                 description={data.mdx.frontmatter.description || data.mdx.excerpt || 'nothin’'}
@@ -24,6 +25,7 @@ const Project: React.FunctionComponent<ProjectProps> = ({ data }) => {
             <MDXRenderer>
                 {data.mdx.body}
             </MDXRenderer>
+            </div>
         </Layout>
     )
 }

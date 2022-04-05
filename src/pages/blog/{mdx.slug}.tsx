@@ -11,16 +11,18 @@ type PostProps = {
 const Post: React.FunctionComponent<PostProps> = ({ data }) => {
     return (
         <Layout pageTitle={data.mdx.frontmatter.title}>
-            <SEO
-                title={data.mdx.frontmatter.title}
-                description={data.mdx.excerpt || 'nothin’'}
-                image={data.mdx.frontmatter.image?.childImageSharp.sizes.src}
-                article
-            />
-            <p>{data.mdx.frontmatter.date}</p>
-            <MDXRenderer>
-                {data.mdx.body}
-            </MDXRenderer>
+            <div className='px-9'>
+                <SEO
+                    title={data.mdx.frontmatter.title}
+                    description={data.mdx.excerpt || 'nothin’'}
+                    image={data.mdx.frontmatter.image?.childImageSharp.sizes.src}
+                    article
+                />
+                <p>{data.mdx.frontmatter.date}</p>
+                <MDXRenderer>
+                    {data.mdx.body}
+                </MDXRenderer>
+            </div>
         </Layout>
     )
 }

@@ -20,11 +20,12 @@ type DataProps = {
 const PortfolioPage = ({ data }: PageProps<DataProps>) => {
     return (
         <Layout pageTitle="My Portfolio">
+            <div className="px-9">
             <SEO />
             {
                 data.allMdx.nodes.map((node) => (
-                    <article key={node.id}>
-                        <h2>
+                    <article key={node.id} className="dark:bg-zinc-800 bg-zinc-200 p-4 rounded mb-4">
+                        <h2 className='m-0'>
                             <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 no-underline transition duration-200" to={`/portfolio/${node.slug}`}>
                                 {node.frontmatter.title}
                             </Link>
@@ -35,6 +36,7 @@ const PortfolioPage = ({ data }: PageProps<DataProps>) => {
                     </article>
                 ))
             }
+            </div>
         </Layout>
     )
 }

@@ -37,9 +37,9 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageTitle, children }) => {
                     </li>
                 </ul>
             </nav>
-            <main className="flex justify-center p-9 mt-5 md:m-9 rounded-xl">
-                <div className="prose lg:prose-xl prose-zinc dark:prose-invert">
-                    <h1>{pageTitle}</h1>
+            <main className="flex justify-center mt-5 md:m-9 rounded-xl">
+                <div className="prose lg:prose-xl prose-zinc dark:prose-invert md:max-w-[90ch] lg:max-w-[120ch]">
+                    <h1 className="px-9 md:px-4">{pageTitle}</h1>
                     {children}
                 </div>
             </main>

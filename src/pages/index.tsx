@@ -29,8 +29,8 @@ const IndexPage = () => {
     return (
         <Layout pageTitle="Christopher Leggett">
             <SEO />
-            <div className="flex flex-col md:flex-row items-center">
-                <div>
+            <div className="flex flex-col md:flex-row items-center bg-hero-pattern px-8 rounded-lg">
+                <div className="font-semibold bg-zinc-100 dark:bg-zinc-900 px-4 rounded-lg">
                     <p>{data.site.siteMetadata.description}</p>
                     <p>Welcome to the redesigned portfolio! The styling is still a bit basic compared to the old Hugo site but that will be fixed in time.</p>
                 </div>
@@ -38,8 +38,8 @@ const IndexPage = () => {
                     <StaticImage alt="A picture of me, Christopher Leggett" src="../images/me.webp" className="rounded-full w-52 md:w-72 self-center m-4" />
                 </div>
             </div>
-            <h2>Featured</h2>
-            <div className="flex flex-wrap justify-center">
+            <h2 className="px-9 md:px-0">Featured</h2>
+            <div className="flex flex-wrap justify-center px-9 md:px-0">
                 {
                     data.allMdx.nodes.map((node: any) => (
                         <article key={node.id} className="dark:bg-zinc-800 rounded p-4 m-2 flex-1">
