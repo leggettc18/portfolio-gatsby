@@ -10,7 +10,8 @@ type PostProps = {
 
 const Post: React.FunctionComponent<PostProps> = ({ data }) => {
     return (
-        <Layout pageTitle={data.mdx.frontmatter.title}>
+        <>
+            <h1 className="px-9 md:px-4">{data.mdx.frontmatter.title}</h1>
             <div className='px-9'>
                 <SEO
                     title={data.mdx.frontmatter.title}
@@ -23,7 +24,7 @@ const Post: React.FunctionComponent<PostProps> = ({ data }) => {
                     {data.mdx.body}
                 </MDXRenderer>
             </div>
-        </Layout>
+        </>
     )
 }
 

@@ -19,7 +19,8 @@ type DataProps = {
 
 const BlogPage = ({ data }: PageProps<DataProps>) => {
     return (
-        <Layout pageTitle="My Blog Posts">
+        <>
+            <h1 className="px-9 md:px-4">My Blog Posts</h1>
             <div className="px-9">
                 <SEO />
                 {
@@ -37,7 +38,7 @@ const BlogPage = ({ data }: PageProps<DataProps>) => {
                     ))
                 }
             </div>
-        </Layout>
+        </>
     )
 }
 

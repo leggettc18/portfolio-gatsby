@@ -19,7 +19,8 @@ type DataProps = {
 
 const PortfolioPage = ({ data }: PageProps<DataProps>) => {
     return (
-        <Layout pageTitle="My Portfolio">
+        <>
+            <h1 className="px-9 md:px-4">My Portfolio</h1>
             <div className="px-9">
             <SEO />
             {
@@ -37,7 +38,7 @@ const PortfolioPage = ({ data }: PageProps<DataProps>) => {
                 ))
             }
             </div>
-        </Layout>
+        </>
     )
 }
 

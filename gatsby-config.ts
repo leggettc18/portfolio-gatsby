@@ -45,7 +45,12 @@ const config: GatsbyConfig = {
                 name: "blog",
                 path: path.resolve("content/blog")
             },
-        }, "gatsby-plugin-mdx-source-name"]
+        }, "gatsby-plugin-mdx-source-name", {
+            resolve: 'gatsby-plugin-layout',
+            options: {
+                component: path.resolve(`./src/components/layout.tsx`)
+            }
+        }]
 };
 
 export default config;
