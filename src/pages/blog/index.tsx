@@ -22,7 +22,7 @@ const BlogPage = ({ data }: PageProps<DataProps>) => {
         <>
             <h1 className="px-9 md:px-4">My Blog Posts</h1>
             <div className="px-9">
-                <SEO />
+                <SEO title="Blog Posts" />
                 {
                     data.allMdx.nodes.map((node) => (
                         <article key={node.id} className="dark:bg-zinc-800 bg-zinc-200 p-4 rounded mb-4">
