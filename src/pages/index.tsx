@@ -39,7 +39,7 @@ const IndexPage = () => {
                     <StaticImage alt="A picture of me, Christopher Leggett" src="../images/me.webp" className="rounded-full w-52 md:w-72 self-center m-4 shadow-xl shadow-zinc-600/50 dark:shadow-zinc-900/50" imgStyle={{ borderRadius: "9999px" }} />
                 </div>
             </div>
-            <h2 className="px-9 md:px-0">Featured</h2>
+            <h2 className="px-9 md:px-0 pt-5">Featured</h2>
             <div className="flex flex-wrap justify-center px-9 md:px-0">
                 {
                     data.allMdx.nodes.map((node: any) => (

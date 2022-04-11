@@ -48,8 +48,8 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageTitle, location, children 
             }}>
             <div className="min-h-screen bg-zinc-100 dark:bg-zinc-900">
                 <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-                <div className="flex flex-col md:flex-row">
-                    <nav className="min-w-full md:min-w-min order-last md:order-first md:h-screen fixed z-50 md:sticky bottom-0 md:top-0 flex md:flex-col justify-center items-center bg-purple-900 group transition-all w-24 max-w-[24px] hover:w-64 duration-200">
+                <div className="">
+                    <nav className="min-w-full md:min-w-min order-last md:order-first md:h-screen fixed z-50 bottom-0 md:top-0 flex md:flex-col justify-center items-center bg-purple-900 group transition-all w-20 hover:w-64 duration-200">
                         {/* <header className="text-zinc-700 dark:text-zinc-300 text-2xl font-bold p-9">{data.site.siteMetadata.title}</header> */}
                         <ul className="flex md:flex-col content-center w-full text-zinc-100">
                             <Link className="text-zinc-100 hover:bg-purple-500 font-semibold text-lg transition duration-200 flex items-center space-x-2 py-4 w-full px-6" to="/">
@@ -74,8 +74,8 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageTitle, location, children 
                             </Link>
                         </ul>
                     </nav>
-                    <main className="flex justify-center w-full mt-5 md:m-9 rounded-xl">
-                        <div className="prose lg:prose-xl prose-zinc dark:prose-invert md:max-w-[90ch] lg:max-w-[120ch]  prose-h2:mt-2 lg:prose-h2:mt-2">
+                    <main className="flex justify-center w-full mt-5 md:m-9 rounded-xl mb-20">
+                        <div className="prose lg:prose-xl prose-zinc dark:prose-invert md:max-w-[65ch] lg:max-w-[80ch]  prose-h2:mt-2 lg:prose-h2:mt-2">
                             <TransitionViews>
                                 {children}
                             </TransitionViews>
