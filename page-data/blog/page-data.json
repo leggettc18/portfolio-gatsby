@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-blog-index-tsx",
     "path": "/blog/",
-    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"July 23, 2021","title":"Golang REST API Tip - Use an Embed Parameter to Embed Related Resources"},"slug":"golang-rest-api-embed-parameter","id":"e12d9ad6-bbbd-5d36-86a7-c26f834f220c","excerpt":"In a REST API, you often have relations between resources. While you can certainly\nreturn IDs for these related objects and require the API…"}]}},"pageContext":{}},
+    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"July 23, 2021","title":"Golang REST API Tip - Use an Embed Parameter to Embed Related Resources"},"slug":"golang-rest-api-embed-parameter","id":"fad12306-e23c-5ff5-960e-12512100fc71","excerpt":"In a REST API, you often have relations between resources. While you can certainly\nreturn IDs for these related objects and require the API…"}]}},"pageContext":{}},
     "staticQueryHashes": ["26522286","3159585216"]}
