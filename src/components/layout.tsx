@@ -74,8 +74,8 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageTitle, location, children 
                             </Link>
                         </ul>
                     </nav>
-                    <main className="flex justify-center w-full mt-5 md:m-9 rounded-xl mb-20">
-                        <div className="prose lg:prose-xl prose-zinc dark:prose-invert md:max-w-[65ch] lg:max-w-[80ch]  prose-h2:mt-2 lg:prose-h2:mt-2">
+                    <main className="flex justify-center w-full mt-5 rounded-xl mb-20">
+                        <div className="prose lg:prose-xl prose-zinc dark:prose-invert md:max-w-[65ch] lg:max-w-[75ch] xl:max-w-[90ch] prose-h2:mt-2 lg:prose-h2:mt-2">
                             <TransitionViews>
                                 {children}
                             </TransitionViews>
