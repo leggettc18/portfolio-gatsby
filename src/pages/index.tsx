@@ -12,14 +12,16 @@ const IndexPage = () => {
                     description
                 }
             }
-            allMdx(sort: {fields: frontmatter___portfolioScore, order: DESC }, filter: { fields: { source: { eq: "portfolio" }}, frontmatter: { featured: { eq: true }}}) {
+            allMdx(sort: { frontmatter: { portfolioScore: DESC } }, filter: { fields: { source: { eq: "portfolio" }}, frontmatter: { featured: { eq: true }}}) {
                 nodes {
                     frontmatter {
                         date(formatString: "MMMM D, YYYY")
                         title
                         portfolioScore
                     }
-                    slug
+                    fields {
+                        slug
+                    }
                     id
                 }
             }
@@ -72,7 +74,7 @@ const IndexPage = () => {
                             data.allMdx.nodes.map((node: any) => (
                                 <article key={node.id} className="dark:bg-zinc-800 rounded p-4 m-2 flex-1">
                                     <div className="m-0 text-2xl text-center">
-                                        <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 no-underline transition duration-200" to={`/portfolio/${node.slug}`}>
+                                        <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 no-underline transition duration-200" to={`/portfolio/${node.fields.slug}`}>
                                             {node.frontmatter.title}
                                         </Link>
                                     </div>

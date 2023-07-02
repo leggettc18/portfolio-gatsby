@@ -1,14 +1,12 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 
 type PostProps = {
     data: any
 }
 
-const Post: React.FunctionComponent<PostProps> = ({ data }) => {
+const Post: React.FunctionComponent<PostProps> = ({ data, children }) => {
     return (
         <div className="flex justify-center">
             <div className="prose lg:prose-xl prose-zinc dark:prose-invert md:max-w-[65ch] lg:max-w-[75ch] xl:max-w-[90ch] prose-h2:mt-2 lg:prose-h2:mt-2">
@@ -21,9 +19,7 @@ const Post: React.FunctionComponent<PostProps> = ({ data }) => {
                         article
                     />
                     <p>{data.mdx.frontmatter.date}</p>
-                    <MDXRenderer>
-                        {data.mdx.body}
-                    </MDXRenderer>
+                    {children}
                 </div>
             </div>
         </div>
