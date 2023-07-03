@@ -9,7 +9,7 @@ const config: GatsbyConfig = {
         image: '/me.png',
         twitterUsername: `@leggettc18`
     },
-    plugins: ["gatsby-plugin-pnpm", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-postcss", {
+    plugins: ["gatsby-plugin-pnpm", "gatsby-plugin-image", "gatsby-plugin-postcss", {
         resolve: 'gatsby-plugin-manifest',
         options: {
             icon: "src/images/icon.webp"

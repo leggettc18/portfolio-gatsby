@@ -42,7 +42,6 @@ const BlogPage = () => {
             <div className="prose lg:prose-xl prose-zinc dark:prose-invert md:max-w-[65ch] lg:max-w-[75ch] xl:max-w-[90ch] prose-h2:mt-2 lg:prose-h2:mt-2">
                 <h1 className="px-9 md:px-4">My Blog Posts</h1>
                 <div className="px-9">
-                    <SEO title="Blog Posts" />
                     {
                         data.allMdx.nodes.map((node) => (
                             <article key={node.id} className="dark:bg-zinc-800 bg-zinc-200 p-4 rounded mb-4">
@@ -62,4 +61,9 @@ const BlogPage = () => {
         </div>
     )
 }
+
+export const Head = () => {
+    <SEO title="Blog Posts" />
+}
+
 export default BlogPage
