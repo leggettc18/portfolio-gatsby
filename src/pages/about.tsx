@@ -1,5 +1,5 @@
 import * as React from "react";
-import SEO from "../components/seo";
+import { SEO } from "../components/seo";
 
 const AboutPage = () => {
     return (
@@ -16,7 +16,7 @@ const AboutPage = () => {
 }
 
 export const Head = () => {
-    <SEO title="About Me" />
+    return <SEO title="About Me" />
 }
 
 export default AboutPage;

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import SEO from '../../components/seo'
+import { SEO } from '../../components/seo'
 
 type Data = {
     allMdx: {
@@ -63,7 +63,7 @@ const BlogPage = () => {
 }
 
 export const Head = () => {
-    <SEO title="Blog Posts" />
+    return <SEO title="Blog Posts" />
 }
 
 export default BlogPage

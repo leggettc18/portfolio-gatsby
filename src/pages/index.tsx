@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import SEO from "../components/seo";
+import { SEO } from "../components/seo";
 
 // markup
 const IndexPage = () => {
@@ -88,7 +88,7 @@ const IndexPage = () => {
 }
 
 export const Head = () => {
-    <SEO />
+    return <SEO />
 }
 
 export default IndexPage

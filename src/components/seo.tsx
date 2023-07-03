@@ -10,21 +10,21 @@ type SEOProps = {
     image?: string,
 }
 
-const SEO: FunctionComponent<SEOProps> = ({ title, description, pathname, article, image, children }) => {
+export const SEO: FunctionComponent<SEOProps> = ({ title, description, pathname, article, image, children }) => {
 
     const {
         title: defaultTitle,
         description: defaultDescription,
-        siteUrl,
+        url,
         image: defaultImage,
         twitterUsername,
     } = useSiteMetadata();
 
     const seo = {
-        title: title || defaultTitle,
+        title: title ? `${title} | ${defaultTitle}` : defaultTitle,
         description: description || defaultDescription,
-        image: `${siteUrl}${image || defaultImage}`,
-        url: `${siteUrl}${pathname}`
+        image: `${url}${image || defaultImage}`,
+        url: `${url}${pathname}`
     };
 
     return (
@@ -53,4 +53,3 @@ const SEO: FunctionComponent<SEOProps> = ({ title, description, pathname, articl
     );
 };
 
-export default SEO;

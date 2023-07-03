@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
-import SEO from '../../components/seo';
+import { SEO } from '../../components/seo';
 
 type ProjectProps = {
     data: {
