@@ -71,13 +71,13 @@ const IndexPage = () => {
                     <div className="flex flex-wrap">
                         {
                             data.allMdx.nodes.map((node: any) => (
-                                <article key={node.id} className="dark:bg-zinc-800 rounded p-4 m-2 flex-1">
+                                <div key={node.id} className="dark:bg-zinc-800 rounded p-4 m-2 flex-1">
                                     <div className="m-0 text-2xl text-center">
                                         <Link className="text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 no-underline transition duration-200" to={`/portfolio/${node.fields.slug}`}>
                                             {node.frontmatter.title}
                                         </Link>
                                     </div>
-                                </article>
+                                </div>
                             ))
                         }
                     </div>
