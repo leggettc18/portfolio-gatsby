@@ -38,8 +38,8 @@ const IndexPage = () => {
             <h1 className="container mx-auto p-9 font-bold text-4xl">
                 Christopher Leggett's Portfolio and Blog
             </h1>
-            <div className="flex flex-col md:flex-row items-center justify-center bg-hero-pattern px-8 rounded-lg">
-                <div className="font-semibold px-4 md:px-9 mt-4 md:mt-0 rounded-lg md:w-1/3 sm:1/2 flex-col space-y-4">
+            <div className="flex flex-col lg:flex-row items-center justify-center bg-hero-pattern px-8 rounded-lg">
+                <div className="font-semibold px-4 md:px-9 mt-4 md:mt-0 rounded-lg lg:w-2/3 flex-col space-y-4">
                     <p>{data.site.siteMetadata.description}</p>
                     <p>
                         I am a Software Developer. Including my education, personal
