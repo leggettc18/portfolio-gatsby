@@ -19,7 +19,7 @@
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "@mdx-js/react": "^2.3.0",
-    "@sindresorhus/slugify": "^1",
+    "@sindresorhus/slugify": "^1.1.2",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "autoprefixer": "^10.4.14",
