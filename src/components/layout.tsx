@@ -13,9 +13,10 @@ const Layout = ({ children }: PageProps) => {
       <div className="flex flex-col sm:flex-row">
         <nav className="min-w-full md:min-w-min order-last md:order-first md:h-screen bottom-0 md:top-0 flex md:flex-col justify-center items-center bg-purple-900 w-max md:w-48 fixed md:sticky z-50">
           {/* <header className="text-zinc-700 dark:text-zinc-300 text-2xl font-bold p-9">{data.site.siteMetadata.title}</header> */}
-          <ul className="flex md:flex-col content-center w-full text-zinc-100">
+          <ul className=" nav-list flex md:flex-col content-center w-full text-zinc-100">
             <Link
-              className="text-zinc-100 font-semibold text-lg flex items-center space-x-2 py-4 w-full px-6"
+              className="link text-zinc-100 font-semibold text-lg flex items-center space-x-2 py-4 mx-4 px-2 md:rounded-s-full w-full md:w-auto"
+              activeClassName="bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 active"
               to="/"
             >
               <li className="w-full flex justify-center md:justify-start">
@@ -26,7 +27,8 @@ const Layout = ({ children }: PageProps) => {
               </li>
             </Link>
             <Link
-              className="text-zinc-100 font-semibold text-lg flex space-x-2 py-4 w-full px-6"
+              className="link text-zinc-100 font-semibold text-lg flex space-x-2 py-4 mx-4 px-2 md:rounded-s-full w-full md:w-auto"
+              activeClassName="bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 active"
               to="/about"
             >
               <li className="w-full flex justify-center md:justify-start">
@@ -37,7 +39,8 @@ const Layout = ({ children }: PageProps) => {
               </li>
             </Link>
             <Link
-              className="text-zinc-100 font-semibold text-lg flex space-x-2 py-4 w-full px-6"
+              className="link text-zinc-100 font-semibold text-lg flex space-x-2 py-4 mx-4 px-2 md:rounded-s-full w-full md:w-auto"
+              activeClassName="bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 active"
               to="/portfolio"
             >
               <li className="w-full flex justify-center md:justify-start">
@@ -48,7 +51,8 @@ const Layout = ({ children }: PageProps) => {
               </li>
             </Link>
             <Link
-              className="text-zinc-100 font-semibold text-lg flex space-x-2 py-4 w-full px-6"
+              className="link text-zinc-100 font-semibold text-lg flex space-x-2 py-4 mx-4 px-2 md:rounded-s-full w-full md:w-auto"
+              activeClassName="bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 active"
               to="/blog"
             >
               <li className="w-full flex justify-center md:justify-start">
